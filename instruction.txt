@@ -1,0 +1,16 @@
+First :
+
+sudo yum update -y
+sudo amazon-linux-extras enable epel
+sudo yum install epel-release -y
+sudo yum install ansible -y
+ansible --version
+
+
+Second : 
+
+Update IPs, than run : ansible mynginx -m ping -i myinventory.ini
+
+Third :
+
+ansible-playbook -i myinventory.ini nginx_setup.yml

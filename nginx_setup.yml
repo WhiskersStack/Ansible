@@ -1,0 +1,15 @@
+---
+- name: Install and start NGINX
+  hosts: mynginx
+  become: true
+  tasks:
+    - name: Install NGINX
+      package:
+        name: nginx
+        state: present
+
+    - name: Ensure NGINX is running and enabled
+      service:
+        name: nginx
+        state: started
+        enabled: true
