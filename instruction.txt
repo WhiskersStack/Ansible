@@ -1,3 +1,5 @@
+#######################
+
 A :
 
 sudo yum update -y
@@ -9,12 +11,20 @@ ansible --version
 
 B : 
 
-Copy key
+Copy key -> nano key.pem
+
+chmod 400 key.pem
 
 C :
 
-Update IPs, than run : ansible mynginx -m ping -i myinventory.ini --extra-vars "@vars.yml"
+Update IPs, than run : 
+
+ansible mynginx -m ping -i myinventory.ini --extra-vars "@vars.yml"
 
 D :
 
+Run :
+
 ansible-playbook -i myinventory.yml nginx_setup.yml --extra-vars "@vars.yml"
+
+#######################
