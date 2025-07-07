@@ -20,7 +20,7 @@ C :
 
     Update IPs : nano vars.yml
 
-    Run : ansible mynginx -m ping -i myinventory.ini --extra-vars "@vars.yml"
+    Run : ansible mynginx -m ping -i myinventory.yml --extra-vars "@vars.yml"
 
 D :
 
